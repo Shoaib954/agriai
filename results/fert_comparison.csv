@@ -1,0 +1,7 @@
+Algorithm,Accuracy,Precision,Recall,F1 Score,Time(s)
+Logistic Regression,76.30%,0.7787,0.7630,0.7671,0.3
+KNN (K=7),53.50%,0.6684,0.5350,0.5776,0.3
+Decision Tree,84.95%,0.9183,0.8495,0.8786,0.2
+Gradient Boosting,85.30%,0.8963,0.8530,0.8703,166.2
+Random Forest,86.05%,0.9205,0.8605,0.8814,2.9
+XGBoost,85.25%,0.8867,0.8525,0.8661,7.5
