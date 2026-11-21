@@ -480,12 +480,20 @@ with st.sidebar:
         import os as _os
         GEMINI_API_KEY = _os.environ.get("GEMINI_API_KEY", "")
     st.session_state['gemini_key'] = GEMINI_API_KEY
-    st.markdown("""
-    <div style="background:#071D12;border:1px solid #1E4D38;border-radius:7px;
-                padding:7px 12px;font-size:0.78rem;color:#6FCF97;">
-      ● Gemini 3.1 active — real-time answers on
-    </div>
-    """, unsafe_allow_html=True)
+    if st.session_state.get('gemini_key'):
+        st.markdown("""
+        <div style="background:#071D12;border:1px solid #1E4D38;border-radius:7px;
+                    padding:7px 12px;font-size:0.78rem;color:#6FCF97;">
+          ● AI Assistant active
+        </div>
+        """, unsafe_allow_html=True)
+    else:
+        st.markdown("""
+        <div style="background:#1A2738;border:1px solid #263647;border-radius:7px;
+                    padding:7px 12px;font-size:0.78rem;color:#425A6B;">
+          ● Offline mode
+        </div>
+        """, unsafe_allow_html=True)
 
     if st.session_state.history:
         st.markdown('<br>', unsafe_allow_html=True)
